@@ -178,7 +178,6 @@ nav ul li a:hover::after {
     height: 400px;
     object-fit: cover;
     border-radius: 10px;
-    filter: drop-shadow(10px -10px 8px #fca2115d);
 }
 
 #about-me-info {

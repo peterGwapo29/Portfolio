@@ -1,6 +1,7 @@
 import './App.css'
 import{ useEffect, useState } from 'react';
 import profileImg from './assets/images/profile.png';
+import profileAbout from './assets/images/profile.jpg';
 import logo from './assets/images/logo.png';
 import inprogressGif from './assets/images/inprogress.gif';
 
@@ -103,7 +104,7 @@ function App() {
                 <h1>WHO AM I ?</h1>
 
                 <div className="about-person">
-                    <img src={profileImg} alt="profile picture" />
+                    <img src={profileAbout} alt="profile picture" />
                     
                     <div className="about-me-info">
                         <p id='about-me-info'> Hi, I'm <strong>Peter Olan-Olan</strong>, currently pursuing
