@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #0d1b2a;
+    padding: 15px 30px;
+    color: white;
+    height: 70px;
+}
+
+.logo {
+    position: absolute;
+    left: 30px;
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fca311;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+#my-name{
+    color: #fca311;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+.Introduction{
+    background: linear-gradient(to bottom, #0d1b2a, #37507f);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+}
+.Introduction h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.name h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    line-height: 1.4;
+}
+
+#my-name {
+    color: #fca311;
+    font-weight: bold;
+}
+
+.image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.image::before {
+    content: "";
+    position: absolute;
+    width: 1000px;
+    height: 400px;
+    background: radial-gradient(circle, #fca211a0, transparent 65%);
+    filter: blur(70px);
+    z-index: 0;
+    border-radius: 50%;
+    margin-top: 100px;
+}
+
+.image img {
+    height: 500px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: -60px;
+}
+
+.incon-link{
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: -32px;
+}
+
+.incon-link a{
+    text-decoration: none;
+    color: #fca311;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.incon-link a:hover{
+    filter: drop-shadow(0 8px 20px #37507f);
+}
+
+#about-me {
+    background-color: #0d1b2a;
+    color: #0d1b2a;
+    padding: 80px 20px;
+    text-align: center;
+    min-height: 100vh;
+}
+
+#about-me h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    font-family: "Poppins", sans-serif;
+    color: #fca311;
+}
+
+.about-person {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    text-align: left;
+    color: #ffffff;
+}
+
+.about-person img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: drop-shadow(10px -10px 8px #fca2115d);
+}
+
+#about-me-info {
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-family: "Poppins", sans-serif;
+}
+
+.about-person button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #fca311;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: .5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.about-person button a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.about-person button:hover {
+    opacity: .9;
+}
+#skills{
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #0d1b2a, #37507f);
+}
+#services{
+    height: 100vh;
+}
+.typing-cursor {
+  display: inline-block;
+  margin-left: 4px;
+  width: 1ch;
+  animation: blink 1s step-end infinite;
+  color: white;
+}
+
+@keyframes blink {
+  from, to { opacity: 0; }
+  50% { opacity: 1; }
+}
+#projects{
+    height: 100vh;
+}
