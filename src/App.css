@@ -212,9 +212,7 @@ nav ul li a:hover::after {
     min-height: 100vh;
     background: linear-gradient(to bottom, #0d1b2a, #37507f);
 }
-#services{
-    height: 100vh;
-}
+
 .typing-cursor {
   display: inline-block;
   margin-left: 4px;
@@ -227,6 +225,32 @@ nav ul li a:hover::after {
   from, to { opacity: 0; }
   50% { opacity: 1; }
 }
+#services{
+    padding: 50px;
+}
 #projects{
     height: 100vh;
+}
+.services-card{
+    padding: 24px;
+    width: 300px;
+}
+
+@media (max-width: 768px) {
+  .name{
+    margin-top: 24px;
+  }
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .hamburger ul li a:hover{
+    color: #fca211a0;
+  }
+
+  .logo img {
+    height: 40px;
+  }
 }

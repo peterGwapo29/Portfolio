@@ -10,6 +10,7 @@ function App() {
     const fullName = 'Peter Olan-Olan';
     const [isDeleting, setIsDeleting] = useState(false);
     const [index, setIndex] = useState(0);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
     const interval = setInterval(() => {
@@ -35,21 +36,32 @@ function App() {
   return (
     <>
 
-    <header>
-            {/* <div className="hamburger-nav">
-                <i class="fa-solid fa-bars"></i>
-            </div> */}
-            
+        <header className="flex justify-between items-center p-4 bg-white relative">
             <div className="logo">
-                <img src={logo} alt="profile picture" />
+                <img src={logo} alt="logo" className="h-10" />
             </div>
-            <nav>
-                <ul>
+
+            <div className="md:hidden cursor-pointer text-2xl" onClick={() => setMenuOpen(!menuOpen)}>
+                <i className="fa-solid fa-bars"></i>
+            </div>
+
+            <nav className="hidden md:block">
+                <ul className="flex space-x-8 font-semibold">
                     <li><a href="#about-me">About me</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#services">Services</a></li>
                 </ul>
             </nav>
+
+            {menuOpen && (
+            <div className="absolute top-full left-0 w-full md:hidden z-10 hamburger">
+                <ul className="flex flex-col items-center space-y-4 py-5">
+                    <li><a href="#about-me" onClick={() => setMenuOpen(false)}>About me</a></li>
+                    <li><a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a></li>
+                    <li><a href="#services" onClick={() => setMenuOpen(false)}>Services</a></li>
+                </ul>
+            </div>
+            )}
         </header>
 
         <main>
@@ -156,13 +168,13 @@ function App() {
                 </div>
             </section>
 
-            <section id="services" className="bg-gray-900 py-20 text-white"><br />
+            <section id="services" className="bg-gray-900 py-20 text-white">
                 <h1 className="text-3xl font-bold text-center mb-12">SERVICES</h1><br />
 
                     <div className="flex flex-wrap justify-center items-center gap-8">
                     
-                        <div className="bg-gray-800 h-[200px] text-center shrink-0 w-full max-w-[400px] rounded-xl shadow-md">
-                            <br /><div className="text-5xl mb-4 text-blue-400 text-center">
+                        <div className="bg-gray-800 services-card text-center shrink-0 rounded-xl shadow-md">
+                            <div className="text-5xl mb-4 text-blue-400 text-center">
                                 <i className="fa-solid fa-code"></i>
                             </div>
                             <h1>Web Development</h1>
@@ -171,8 +183,8 @@ function App() {
                             </p>
                         </div>
 
-                        <div className="bg-gray-800 h-[200px] text-center shrink-0 w-full max-w-[400px] rounded-xl shadow-md">
-                            <br /><div className="text-5xl mb-4 text-pink-400 text-center">
+                        <div className="bg-gray-800 services-card text-center shrink-0 rounded-xl shadow-md">
+                            <div className="text-5xl mb-4 text-pink-400 text-center">
                                 <i className="fa-solid fa-pencil-ruler"></i>
                             </div>
                             <h1>UI/UX Design</h1>
@@ -181,8 +193,8 @@ function App() {
                             </p>
                         </div>
 
-                        <div className="bg-gray-800 h-[200px] text-center shrink-0 w-full max-w-[400px] rounded-xl shadow-md">
-                            <br /><div className="text-5xl mb-4 text-red-400 text-center">
+                        <div className="bg-gray-800 services-card text-center shrink-0 rounded-xl shadow-md">
+                            <div className="text-5xl mb-4 text-red-400 text-center">
                                 <i className="fa-solid fa-server"></i>
                             </div>
                             <h1>Backend Development</h1>
@@ -191,8 +203,8 @@ function App() {
                             </p>
                         </div>
 
-                        <div className="bg-gray-800 h-[200px] text-center shrink-0 w-full max-w-[400px] rounded-xl shadow-md">
-                            <br /><div className="text-5xl mb-4 text-green-400 text-center">
+                        <div className="bg-gray-800 services-card text-center shrink-0 rounded-xl shadow-md">
+                            <div className="text-5xl mb-4 text-green-400 text-center">
                                 <i className="fa-brands fa-git-alt"></i>
                             </div>
                             <h1>Version Control</h1>
