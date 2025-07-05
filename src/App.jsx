@@ -3,6 +3,7 @@ import{ useEffect, useState } from 'react';
 import profileImg from './assets/images/profile.png';
 import profileAbout from './assets/images/profile.jpg';
 import logo from './assets/images/logo.png';
+import project1 from './assets/images/project/project1.png';
 import inprogressGif from './assets/images/inprogress.gif';
 
 function App() {
@@ -216,31 +217,49 @@ function App() {
                                 I manage and collaborate on projects using Git and GitHub, ensuring code integrity and team efficiency.
                             </p>
                         </div>
-
-                        
                     </div>
             </section>
 
-            <section id='projects' className='bg-gray-700'><br />
+            <section id="projects" className="bg-gray-700 py-16 text-white"><br />
                 <h1 className="text-3xl font-bold text-center mb-12">My Projects</h1><br />
 
-                    <div className="flex flex-wrap justify-center items-center gap-8">
-
-                        <img src={inprogressGif} alt="GIF description" />
+                <div className="flex flex-wrap justify-center items-center gap-8">
                     
-                        {/* <div className="bg-gray-800 h-[200px] text-center shrink-0 w-full max-w-[400px] rounded-xl shadow-md">
-                            <h1>1</h1>
-                        </div>
+                    <div
+                        className="hover:cursor-pointer transform hover:scale-105 transition-transform duration-300 relative bg-cover bg-center h-[200px] w-full max-w-[400px] rounded-xl shadow-md overflow-hidden"
+                        style={{ backgroundImage: `url(${project1})` }}
+                        >
+                        <div className="overlay-background"></div>
+                        <div className="project-build relative z-10 flex flex-col items-center justify-center h-full text-center text-white p-4">
+                            <h1 className="text-lg font-semibold">Club and Event Management System</h1>
+                            <p className="text-sm mb-3">Admin module only</p>
 
-                        <div className="bg-gray-800 h-[200px] text-center shrink-0 w-full max-w-[400px] rounded-xl shadow-md">
-                            <h1>2</h1>
-                        </div>
+                            <div className="flex gap-4 text-4xl">
+                                <i className="devicon-laravel-original colored"></i>
+                                <i className="devicon-tailwindcss-original colored"></i>
+                                <i className="devicon-mysql-plain-wordmark colored"></i>
+                            </div><br />
 
-                        <div className="bg-gray-800 h-[200px] text-center shrink-0 w-full max-w-[400px] rounded-xl shadow-md">
-                            <h1>3</h1>
-                        </div> */}
-                        
+                            <div className="flex justify-center content-center items-center gap-5">
+                                <a href="https://github.com/peterGwapo29/System">
+                                    <i class="devicon-github-original colored text-2xl hover:text-4xl duration-100"></i>
+                                </a>
+                                <a href="#projects" onClick={ (() => alert("Sorry, Live demo is not available yet.")) }>
+                                    <i class="fa-solid fa-eye text-2xl hover:text-4xl duration-100"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
+
+                    <div className="hover:cursor-pointer transform hover:scale-105 transition-transform duration-300 bg-gray-800 h-[200px] w-full max-w-[400px] rounded-xl shadow-md flex items-center justify-center text-center">
+                        <img src={inprogressGif} alt="In Progress" className="h-full object-contain" />
+                    </div>
+
+                    <div className="hover:cursor-pointer transform hover:scale-105 transition-transform duration-300 bg-gray-800 h-[200px] w-full max-w-[400px] rounded-xl shadow-md flex items-center justify-center text-center">
+                        <img src={inprogressGif} alt="In Progress" className="h-full object-contain" />
+                    </div>
+
+                </div>
             </section>
 
             <section id="contact" className="bg-gradient-to-b from-gray-800 to-gray-900 text-white py-20 px-4">

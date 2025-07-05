@@ -236,6 +236,21 @@ nav ul li a:hover::after {
     padding: 12px;
 }
 
+.overlay-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+#projects i{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
 #contact{
     min-height: 100vh;
     height: auto;
