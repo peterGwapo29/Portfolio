@@ -244,12 +244,12 @@ function App() {
             </section>
 
             <section id="contact" className="bg-gradient-to-b from-gray-800 to-gray-900 text-white py-20 px-4">
-                <div className=""><br />
+                <div className="flex justify-center content-center items-center flex-col"><br />
                     <h1 className="text-3xl font-bold text-center mb-12 text-[#fca311]">GET IN TOUCH</h1><br /><br />
 
-                    <div className="flex flex-col lg:flex-row justify-center gap-10 items-center">
+                    <div className="flex flex-col lg:flex-row justify-between items-center gap-10 w-full max-w-6xl mx-auto px-4">
 
-                    <div className="contact1 flex flex-col gap-5">
+                    <div className="contact1 flex flex-col gap-5 w-full lg:w-1/2">
                         <h2 className="text-xl font-semibold">Let's connect</h2>
                         <p>
                         Have a project in mind or just want to say hello? Feel free to drop a message.
@@ -270,8 +270,8 @@ function App() {
                         </div>
                     </div>
 
-                    <form className="w-full max-w-2xl mx-auto px-6 py-12">
-                        <div className="flex flex-col flex-wrap gap-5 bg-gray-900 p-6 rounded-lg shadow-lg info">
+                    <form className='bg-gray-900 rounded-lg shadow-lg w-full max-w-xl px-6 py-8'>
+                        <div className="flex flex-col gap-5">
 
                         <input
                             type="text"
@@ -313,7 +313,7 @@ function App() {
 
         </main>
 
-        <footer className='bg-gray-700 text-center'>
+        <footer className='bg-gray-700 text-center flex justify-center'>
             <p>&copy; DevByte { new Date().getFullYear() }</p>
         </footer>
       

@@ -237,18 +237,17 @@ nav ul li a:hover::after {
 }
 
 #contact{
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
 }
-
-.info{
-    padding: 50px;
-}
-
 .btn-submit{
     padding: 6px 12px;
 }
 .input-field, .btn-submit{
     padding: 10px;
+}
+form{
+    padding: 20px;
 }
 footer{
     padding: 10px;
