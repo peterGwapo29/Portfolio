@@ -232,7 +232,27 @@ nav ul li a:hover::after {
     padding: 24px;
     width: 300px;
 }
+.contact1{
+    padding: 12px;
+}
 
+#contact{
+    height: 100vh;
+}
+
+.info{
+    padding: 50px;
+}
+
+.btn-submit{
+    padding: 6px 12px;
+}
+.input-field, .btn-submit{
+    padding: 10px;
+}
+footer{
+    padding: 10px;
+}
 @media (max-width: 768px) {
   .name{
     margin-top: 160px;

@@ -243,7 +243,79 @@ function App() {
                     </div>
             </section>
 
+            <section id="contact" className="bg-gradient-to-b from-gray-800 to-gray-900 text-white py-20 px-4">
+                <div className=""><br />
+                    <h1 className="text-3xl font-bold text-center mb-12 text-[#fca311]">GET IN TOUCH</h1><br /><br />
+
+                    <div className="flex flex-col lg:flex-row justify-center gap-10 items-center">
+
+                    <div className="contact1 flex flex-col gap-5">
+                        <h2 className="text-xl font-semibold">Let's connect</h2>
+                        <p>
+                        Have a project in mind or just want to say hello? Feel free to drop a message.
+                        </p>
+                        <div className="flex flex-col gap-3">
+                        <div className="flex gap-3 shrink">
+                            <i className="fa-solid fa-envelope text-[#fca311] text-xl"></i>
+                            <span>peterolanolan@gmail.com</span>
+                        </div>
+                        <div className="flex gap-3 shrink">
+                            <i className="fa-brands fa-facebook text-[#fca311] text-xl"></i>
+                            <span>facebook.com/petergwapo.292004</span>
+                        </div>
+                        <div className="flex gap-3 shrink">
+                            <i className="fa-brands fa-github text-[#fca311] text-xl"></i>
+                            <span>github.com/peterGwapo29</span>
+                        </div>
+                        </div>
+                    </div>
+
+                    <form className="w-full max-w-2xl mx-auto px-6 py-12">
+                        <div className="flex flex-col flex-wrap gap-5 bg-gray-900 p-6 rounded-lg shadow-lg info">
+
+                        <input
+                            type="text"
+                            placeholder="Your Name"
+                            className="input-field w-full p-3 bg-white/5 text-white rounded-md border border-white/10 focus:outline-none focus:ring-2 focus:ring-[#fca311] placeholder:text-gray-400"
+                        />
+
+                        <input
+                            type="email"
+                            placeholder="Your Email"
+                            className="input-field w-full p-3 bg-white/5 text-white rounded-md border border-white/10 focus:outline-none focus:ring-2 focus:ring-[#fca311] placeholder:text-gray-400"
+                        />
+
+                        <input
+                            type="text"
+                            placeholder="Subject"
+                            className="input-field w-full p-3 bg-white/5 text-white rounded-md border border-white/10 focus:outline-none focus:ring-2 focus:ring-[#fca311] placeholder:text-gray-400"
+                        />
+
+                        <textarea
+                            placeholder="Your Message"
+                            rows="5"
+                            className="input-field w-full p-3 bg-white/5 text-white rounded-md border border-white/10 focus:outline-none focus:ring-2 focus:ring-[#fca311] placeholder:text-gray-400 resize-none"
+                        />
+
+                        <button
+                            type="submit"
+                            className="btn-submit cursor-pointer bg-[#fca311] text-black py-3 rounded-md hover:bg-[#e39110] transition duration-200"
+                        >
+                            Send Message
+                        </button>
+
+                        </div>
+                    </form>
+
+                    </div>
+                </div>
+            </section>
+
         </main>
+
+        <footer className='bg-gray-700 text-center'>
+            <p>&copy; DevByte { new Date().getFullYear() }</p>
+        </footer>
       
     </>
   )
