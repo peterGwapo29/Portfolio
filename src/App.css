@@ -206,7 +206,7 @@ nav ul li a:hover::after {
     opacity: .9;
 }
 #skills{
-    min-height: 100vh;
+    padding: 50px;
     background: linear-gradient(to bottom, #0d1b2a, #37507f);
 }
 
@@ -226,7 +226,7 @@ nav ul li a:hover::after {
     padding: 50px;
 }
 #projects{
-    height: 100vh;
+    padding: 50px;
 }
 .services-card{
     padding: 24px;

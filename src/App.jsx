@@ -147,6 +147,7 @@ function App() {
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" className="h-[80px]" />
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" className="h-[80px]" />
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" className="h-[80px]" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" className="h-[80px]"/>
                     </div>
                     </div>
 
@@ -156,6 +157,8 @@ function App() {
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" className="h-[100px]" />
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original-wordmark.svg" className="h-[100px]" />
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" className="h-[80px]" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg" className="h-[80px]"/>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg" className="h-[80px]"/>
                     </div>
                     </div>
 
@@ -167,6 +170,7 @@ function App() {
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" className="h-[80px]" />
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" className="h-[80px]" />
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" className="h-[80px]" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original-wordmark.svg"  className="h-[80px]"/>
                     </div>
                     </div>
 
@@ -220,7 +224,7 @@ function App() {
                     </div>
             </section>
 
-            <section id="projects" className="bg-gray-700 py-16 text-white"><br />
+            <section id="projects" className="bg-gray-700 py-16 text-white">
                 <h1 className="text-3xl font-bold text-center mb-12">My Projects</h1><br />
 
                 <div className="flex flex-wrap justify-center items-center gap-8">
