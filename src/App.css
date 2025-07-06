@@ -236,6 +236,10 @@ nav ul li a:hover::after {
     padding: 12px;
 }
 
+.logo-bec{
+    filter: drop-shadow(10px 10px 10px rgba(0, 93, 130, 0.7));
+}
+
 .overlay-background{
     position: absolute;
     top: 0;
