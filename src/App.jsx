@@ -5,6 +5,7 @@ import profileAbout from './assets/images/profile.jpg';
 import logo from './assets/images/logo.png';
 import project1 from './assets/images/project/project1.png';
 import inprogressGif from './assets/images/inprogress.gif';
+import CV from '../public/CV/PeterCV.pdf';
 
 function App() {
 
@@ -34,6 +35,11 @@ function App() {
 
     return () => clearInterval(interval);
     }, [index, isDeleting]);
+
+    function handleSubmitMessage(e) {
+        e.preventDefault();
+        alert('This feature is not implemented yet, sorry for the inconvenience.');
+    }
 
   return (
     <>
@@ -126,7 +132,7 @@ function App() {
                             solving real-world problems through code.
                         </p>
 
-                        <button><a href="#">Download CV</a></button>
+                        <button><a href={CV}>Download CV</a></button>
                     </div>
 
                 </div>
@@ -323,6 +329,7 @@ function App() {
                         <button
                             type="submit"
                             className="btn-submit cursor-pointer bg-[#fca311] text-black py-3 rounded-md hover:bg-[#e39110] transition duration-200"
+                            onClick={handleSubmitMessage}
                         >
                             Send Message
                         </button>
