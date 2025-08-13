@@ -4,8 +4,11 @@ import profileImg from './assets/images/profile.png';
 import profileAbout from './assets/images/profile.jpg';
 import logo from './assets/images/logo.png';
 import project1 from './assets/images/project/project1.png';
+import UI1 from './assets/images/project/UI/UX/UI1.png';
+import UI2 from './assets/images/project/UI/UX/UI2.png';
+import UI3 from './assets/images/project/UI/UX/UI3.png';
 import inprogressGif from './assets/images/inprogress.gif';
-import CV from '../public/CV/PeterCV.pdf';
+import CV from '/src/CV/PeterCV.pdf';
 
 function App() {
 
@@ -231,10 +234,14 @@ function App() {
             </section>
 
             <section id="projects" className="bg-gray-700 py-16 text-white">
-                <h1 className="text-3xl font-bold text-center mb-12">My Projects</h1><br />
+                <h1 className="text-3xl font-bold text-center mb-15">My Projects</h1><br />
+                <hr id='line'/>
+                <br />
+                
+                {/* Web Development projects */}
+                <h1 className="text-2xl font-bold text-center mb-12">Web Development</h1><br />
 
                 <div className="flex flex-wrap justify-center items-center gap-8">
-                    
                     <div
                         className="hover:cursor-pointer transform hover:scale-105 transition-transform duration-300 relative bg-cover bg-center h-[200px] w-full max-w-[400px] rounded-xl shadow-md overflow-hidden"
                         style={{ backgroundImage: `url(${project1})` }}
@@ -270,6 +277,84 @@ function App() {
                     </div>
 
                 </div>
+
+                {/* UI/UX projects */}
+                <br />
+                <h1 className="text-2xl font-bold text-center mb-12">UI/UX</h1><br />
+
+                <div className="flex flex-wrap justify-center items-center gap-8">
+                    <div
+                        className="hover:cursor-pointer transform hover:scale-105 transition-transform duration-300 relative bg-cover bg-center h-[200px] w-full max-w-[400px] rounded-xl shadow-md overflow-hidden"
+                        style={{ backgroundImage: `url(${UI1})` }}
+                        >
+                        <div className="overlay-background"></div>
+                        <div className="project-build relative z-10 flex flex-col items-center justify-center h-full text-center text-white p-4">
+                            <h1 className="text-lg font-semibold">ROG Clone</h1>
+                            <p className="text-lg mb-3">Web Base UI/UX</p>
+
+                            <div className="flex gap-4 text-4xl">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" className="h-[32px] drop-shadow-lg" />
+                            </div><br />
+
+                            <div className="flex justify-center content-center items-center gap-5">
+                                
+                                <a href="https://www.figma.com/design/OfhqyjbhM92plO7RwZKJtL/Shopping-cart?node-id=142-862&t=X0ODVRiaiY99dC35-1">
+                                    <i class="fa-solid fa-eye text-2xl hover:text-4xl duration-100"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="hover:cursor-pointer transform hover:scale-105 transition-transform duration-300 bg-gray-800 h-[200px] w-full max-w-[400px] rounded-xl shadow-md flex items-center justify-center text-center">
+                        <div
+                            className="hover:cursor-pointer transform hover:scale-105 transition-transform duration-300 relative bg-cover bg-no-repeat bg-center h-[200px] w-full max-w-[400px] rounded-xl shadow-md overflow-hidden"
+                            style={{ backgroundImage: `url(${UI2})` }}
+                            >
+                            <div className="overlay-background"></div>
+                            <div className="project-build relative z-10 flex flex-col items-center justify-center h-full text-center text-white p-4">
+                                <h1 className="text-lg font-semibold">Vero</h1>
+                                <p className="text-lg mb-3">Mobile UI/UX</p>
+
+                                <div className="flex gap-4 text-4xl">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" className="h-[32px] drop-shadow-lg" />
+                                </div><br />
+
+                                <div className="flex justify-center content-center items-center gap-5">
+                                    
+                                    <a href="https://www.figma.com/design/FxsWHsMoLpUbj21FJ7qw0q/vero?node-id=0-1&t=sExPRLIiuekW2sLb-1">
+                                        <i class="fa-solid fa-eye text-2xl hover:text-4xl duration-100"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="hover:cursor-pointer transform hover:scale-105 transition-transform duration-300 bg-gray-800 h-[200px] w-full max-w-[400px] rounded-xl shadow-md flex items-center justify-center text-center">
+                        <div
+                            className="hover:cursor-pointer transform hover:scale-105 transition-transform duration-300 relative bg-cover bg-no-repeat bg-center h-[200px] w-full max-w-[400px] rounded-xl shadow-md overflow-hidden"
+                            style={{ backgroundImage: `url(${UI3})` }}
+                            >
+                            <div className="overlay-background"></div>
+                            <div className="project-build relative z-10 flex flex-col items-center justify-center h-full text-center text-white p-4">
+                                <h1 className="text-lg font-semibold">Business Card</h1>
+                                <p className="text-lg mb-3">UI</p>
+
+                                <div className="flex gap-4 text-4xl">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" className="h-[32px] drop-shadow-lg" />
+                                </div><br />
+
+                                <div className="flex justify-center content-center items-center gap-5">
+                                    
+                                    <a href="https://www.figma.com/design/kBR6R9Mn8vGQ5ajJxAJIw7/mekykbusiness?node-id=0-1&t=1wBRHkX7eyMpbMb1-1">
+                                        <i class="fa-solid fa-eye text-2xl hover:text-4xl duration-100"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             </section>
 
             <section id="contact" className="bg-gradient-to-b from-gray-800 to-gray-900 text-white py-20 px-4">
