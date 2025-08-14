@@ -297,4 +297,7 @@ footer{
   .logo img {
     height: 50px;
   }
+  #skills img{
+    height: 50px;
+  }
 }
