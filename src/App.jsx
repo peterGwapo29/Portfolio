@@ -8,6 +8,7 @@ import UI1 from "./assets/images/project/UI/UX/UI1.png";
 import UI2 from "./assets/images/project/UI/UX/UI2.png";
 import UI3 from "./assets/images/project/UI/UX/UI3.png";
 import UI4 from "./assets/images/project/UI/UX/UI4.png";
+import UI5 from "./assets/images/project/UI/UX/UI5.png";
 import inprogressGif from "./assets/images/inprogress.gif";
 import CV from "/src/CV/PeterCV.pdf";
 
@@ -492,7 +493,35 @@ function App() {
                 </div>
               </div>
             </div>
+
+            <div className="hover:cursor-pointer transform hover:scale-105 transition-transform duration-300 bg-gray-800 h-[200px] w-full max-w-[400px] rounded-xl shadow-md flex items-center justify-center text-center">
+              <div
+                className="hover:cursor-pointer transform hover:scale-105 transition-transform duration-300 relative bg-contain bg-no-repeat bg-center h-[200px] w-full max-w-[400px] rounded-xl shadow-md overflow-hidden"
+                style={{ backgroundImage: `url(${UI5})` }}
+              >
+                <div className="overlay-background"></div>
+                <div className="project-build relative z-10 flex flex-col items-center justify-center h-full text-center text-white p-4">
+                  <h1 className="text-lg font-semibold">Payment System</h1>
+                  <p className="text-lg mb-3">Mobile/Web UI/UX</p>
+
+                  <div className="flex gap-4 text-4xl">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+                      className="h-[32px] drop-shadow-lg"
+                    />
+                  </div>
+                  <br />
+
+                  <div className="flex justify-center content-center items-center gap-5">
+                    <a href="https://www.figma.com/design/MOYpGEp43Z9tdP2JwtSaAr/Payment-System?node-id=0-1&t=r3PEtpA2vwkcnEUj-1">
+                      <i class="fa-solid fa-eye text-2xl hover:text-4xl duration-100"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+          
         </section>
 
         <section
