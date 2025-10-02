@@ -1,3 +1,4 @@
+import "../css/App.css";
 import { useState } from "react";
 import logo from "../images/logo.png";
 
@@ -26,7 +27,7 @@ function Header() {
       </div>
 
       {menuOpen && (
-        <div className="absolute top-full left-0 w-full md:hidden z-10 bg-white text-black">
+        <div className="absolute top-full left-0 w-full md:hidden z-10 hamburger bg-white text-black">
           <ul className="flex flex-col items-center space-y-4 py-5">
             <li><a href="#about-me" onClick={() => setMenuOpen(false)}>About me</a></li>
             <li><a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a></li>
