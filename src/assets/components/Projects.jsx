@@ -59,7 +59,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="bg-gray-700 py-16 text-white">
+    <section id="projects" className="py-16 text-white" style={{ backgroundColor: "#374151" }}>
       <h1 className="text-3xl font-bold text-center mb-12">My Projects</h1>
       <hr className="mb-12" />
 

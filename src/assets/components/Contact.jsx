@@ -9,7 +9,7 @@ function Contact() {
   return (
     <section
           id="contact"
-          className="bg-gradient-to-b from-gray-800 to-gray-900 text-white py-20 px-4"
+          className="text-white py-20 px-4" style={{ background: "linear-gradient(to bottom, #1f2937, #111827)" }}
         >
           <div className="flex justify-center content-center items-center flex-col">
             <br />

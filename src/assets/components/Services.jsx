@@ -6,7 +6,7 @@ function Services() {
   ];
 
   return (
-    <section id="services" className="bg-gray-900 py-20 text-white">
+    <section id="services" className="py-20 text-white" style={{ backgroundColor: "#1f2937" }}>
           <h1 className="text-3xl font-bold text-center mb-12">SERVICES</h1>
           <br />
 
