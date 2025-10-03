@@ -1,4 +1,4 @@
-import profileAbout from "../images/profile.jpg";
+import profileAbout from "../images/profile2.png";
 import CV from "../CV/PeterCV.pdf";
 
 function AboutMe() {
@@ -7,7 +7,7 @@ function AboutMe() {
       <h1>WHO AM I ?</h1>
 
       <div className="about-person">
-        <img src={profileAbout} alt="profile picture" />
+        <img src={profileAbout} alt="profile picture"/>
 
         <div className="about-me-info">
           <p id="about-me-info">
