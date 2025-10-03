@@ -207,7 +207,7 @@ nav ul li a:hover::after {
 }
 #skills {
   padding: 50px;
-  background: linear-gradient(to bottom, #0d1b2a, #37507f);
+  background: #0d1b2a;
 }
 
 .typing-cursor {
@@ -281,6 +281,11 @@ footer {
   color: gray;
   opacity: 0.2;
 }
+
+.project-card{
+  padding: 44px 0px;
+}
+
 @media (max-width: 768px) {
   .name {
     margin-top: 160px;

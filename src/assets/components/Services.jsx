@@ -1,61 +1,50 @@
 function Services() {
   const services = [
-    { title: "Web Development", desc: "Building responsive and modern websites." },
-    { title: "UI/UX Design", desc: "Designing clean and user-friendly interfaces." },
-    { title: "Backend Development", desc: "Creating APIs and managing databases." },
+    { 
+      title: "Web Development", 
+      desc: "I build responsive and high-performance websites using HTML, CSS, JavaScript, Tailwind, and React.", 
+      icon: "fa-solid fa-code", 
+      color: "text-blue-400" 
+    },
+    { 
+      title: "UI/UX Design", 
+      desc: "I design intuitive and user-friendly interfaces using Figma, focusing on clean and modern design principles.", 
+      icon: "fa-solid fa-pencil-ruler", 
+      color: "text-pink-400" 
+    },
+    { 
+      title: "Backend Development", 
+      desc: "I create and manage backend systems using PHP and Laravel with database integration (MySQL).", 
+      icon: "fa-solid fa-server", 
+      color: "text-red-400" 
+    },
+    { 
+      title: "Version Control", 
+      desc: "I manage and collaborate on projects using Git and GitHub, ensuring code integrity and team efficiency.", 
+      icon: "fa-brands fa-git-alt", 
+      color: "text-green-400" 
+    },
   ];
 
   return (
-    <section id="services" className="py-20 text-white" style={{ backgroundColor: "#1f2937" }}>
-          <h1 className="text-3xl font-bold text-center mb-12">SERVICES</h1>
-          <br />
+    <section id="services" className="py-20 text-white" style={{ backgroundColor: "#0d1b2a" }}>
+      <h1 className="text-3xl font-bold text-center mb-12">SERVICES</h1><br />
 
-          <div className="flex flex-wrap justify-center items-center gap-8">
-            <div className="bg-gray-800 services-card text-center shrink-0 rounded-xl shadow-md">
-              <div className="text-5xl mb-4 text-blue-400 text-center">
-                <i className="fa-solid fa-code"></i>
-              </div>
-              <h1>Web Development</h1>
-              <p className="text-lg text-gray-300 text-center">
-                I build responsive and high-performance websites using HTML,
-                CSS, JavaScript, Tailwind, and React.
-              </p>
+      <div className="flex flex-wrap justify-center items-center gap-8">
+        {services.map((service, i) => (
+          <div 
+            key={i} 
+            className="bg-gray-800 services-card text-center shrink-0 rounded-xl shadow-md p-6 w-72 hover:scale-105 transition-transform duration-300"
+          >
+            <div className={`text-5xl mb-4 ${service.color}`}>
+              <i className={service.icon}></i>
             </div>
-
-            <div className="bg-gray-800 services-card text-center shrink-0 rounded-xl shadow-md">
-              <div className="text-5xl mb-4 text-pink-400 text-center">
-                <i className="fa-solid fa-pencil-ruler"></i>
-              </div>
-              <h1>UI/UX Design</h1>
-              <p className="text-lg text-gray-300 text-center">
-                I design intuitive and user-friendly interfaces using Figma,
-                focusing on clean and modern design principles.
-              </p>
-            </div>
-
-            <div className="bg-gray-800 services-card text-center shrink-0 rounded-xl shadow-md">
-              <div className="text-5xl mb-4 text-red-400 text-center">
-                <i className="fa-solid fa-server"></i>
-              </div>
-              <h1>Backend Development</h1>
-              <p className="text-lg text-gray-300 text-center">
-                I create and manage backend systems using PHP and Laravel with
-                database integration (MySQL).
-              </p>
-            </div>
-
-            <div className="bg-gray-800 services-card text-center shrink-0 rounded-xl shadow-md">
-              <div className="text-5xl mb-4 text-green-400 text-center">
-                <i className="fa-brands fa-git-alt"></i>
-              </div>
-              <h1>Version Control</h1>
-              <p className="text-lg text-gray-300 text-center">
-                I manage and collaborate on projects using Git and GitHub,
-                ensuring code integrity and team efficiency.
-              </p>
-            </div>
+            <h1 className="text-xl font-semibold mb-2">{service.title}</h1>
+            <p className="text-lg text-gray-300">{service.desc}</p>
           </div>
-        </section>
+        ))}
+      </div>
+    </section>
   );
 }
 

@@ -40,7 +40,7 @@ function Skills() {
     <section id="skills" className="bg-gray-700">
       <br />
       <h1 className="text-3xl font-bold text-center">MY SKILLS</h1>
-      <br />
+      <br /><br />
 
       <div className="flex flex-col items-center gap-12 px-6">
         <div className="w-full max-w-5xl">
