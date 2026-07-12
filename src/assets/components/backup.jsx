@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 import profileImg from "./assets/images/profile.png";
 import profileAbout from "./assets/images/profile.jpg";
 import logo from "./assets/images/logo.png";
-import project1 from "./assets/images/project/project1.png";
-import UI1 from "./assets/images/project/UI/UX/UI1.png";
-import UI2 from "./assets/images/project/UI/UX/UI2.png";
-import UI3 from "./assets/images/project/UI/UX/UI3.png";
-import UI4 from "./assets/images/project/UI/UX/UI4.png";
-import UI5 from "./assets/images/project/UI/UX/UI5.png";
+import project1 from "./assets/images/project/webdev/club-event-management-system/1.png";
+import UI1 from "./assets/images/project/ui-ux/rog-asus-clone/1.png";
+import UI2 from "./assets/images/project/mobileapp/vero/1.png";
+import UI3 from "./assets/images/project/ui-ux/business-card-concept/1.png";
+import UI4 from "./assets/images/project/ui-ux/footprint-travel/1.png";
+import UI5 from "./assets/images/project/ui-ux/payment-transfer-system/1.png";
 import inprogressGif from "./assets/images/inprogress.gif";
 import CV from "/src/CV/PeterCV.pdf";
 

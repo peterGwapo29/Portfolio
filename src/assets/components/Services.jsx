@@ -1,49 +1,68 @@
+import React from "react";
+
 function Services() {
   const services = [
     { 
       title: "Web Development", 
-      desc: "I build responsive and high-performance websites using HTML, CSS, JavaScript, Tailwind, and React.", 
+      desc: "Creating responsive, secure, and modern web applications utilizing HTML, CSS, JavaScript, Tailwind, and React.", 
       icon: "fa-solid fa-code", 
       color: "text-blue-400" 
     },
     { 
-      title: "UI/UX Design", 
-      desc: "I design intuitive and user-friendly interfaces using Figma, focusing on clean and modern design principles.", 
+      title: "UI/UX & Mobile Prototypes", 
+      desc: "Structuring clean, intuitive user wireframes and high-fidelity clickable mockups using modern design systems in Figma.", 
       icon: "fa-solid fa-pencil-ruler", 
       color: "text-pink-400" 
     },
     { 
-      title: "Backend Development", 
-      desc: "I create and manage backend systems using PHP and Laravel with database integration (MySQL).", 
+      title: "Backend Engineering", 
+      desc: "Building relational databases (MySQL) and RESTful API backends with robust logic structures in PHP and Laravel.", 
       icon: "fa-solid fa-server", 
       color: "text-red-400" 
     },
     { 
-      title: "Version Control", 
-      desc: "I manage and collaborate on projects using Git and GitHub, ensuring code integrity and team efficiency.", 
+      title: "Version Control & Hosting", 
+      desc: "Setting up collaborative workflows with Git & GitHub, and managing live deployments on Vercel or cloud web hosting.", 
       icon: "fa-brands fa-git-alt", 
       color: "text-green-400" 
     },
   ];
 
   return (
-    <section id="services" className="py-20 text-white" style={{ backgroundColor: "#0d1b2a" }}>
-      <h1 className="text-3xl font-bold text-center mb-12">SERVICES</h1><br />
+    <section className="page-section">
+      
+      {/* Header */}
+      <div className="flex flex-col gap-2 mb-12">
+        <h1 className="font-mono text-3xl font-bold tracking-tight text-white">
+          services
+        </h1>
+        <p className="text-zinc-500 text-sm max-w-xl leading-relaxed">
+          The technical capabilities and software solutions I offer to clients, teammates, and academic partners.
+        </p>
+      </div>
 
-      <div className="flex flex-wrap justify-center items-center gap-8">
+      {/* Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {services.map((service, i) => (
           <div 
             key={i} 
-            className="bg-gray-800 services-card text-center shrink-0 rounded-xl shadow-md p-6 w-72 hover:scale-105 transition-transform duration-300"
+            className="bg-[#121214] border border-zinc-900 rounded-2xl p-6 hover-scale hover:border-zinc-800 transition-all duration-200 flex flex-col gap-4"
           >
-            <div className={`text-5xl mb-4 ${service.color}`}>
+            <div className={`text-3xl ${service.color}`}>
               <i className={service.icon}></i>
             </div>
-            <h1 className="text-xl font-semibold mb-2">{service.title}</h1>
-            <p className="text-lg text-gray-300">{service.desc}</p>
+            
+            <h2 className="text-lg font-bold text-white font-mono mt-1">
+              {service.title}
+            </h2>
+            
+            <p className="text-zinc-400 text-sm leading-relaxed">
+              {service.desc}
+            </p>
           </div>
         ))}
       </div>
+
     </section>
   );
 }

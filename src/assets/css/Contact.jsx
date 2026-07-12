@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/mlgqroao";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
 
 function Contact() {
   const [formData, setFormData] = useState({
