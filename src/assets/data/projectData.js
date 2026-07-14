@@ -112,7 +112,7 @@ export const featuredProjects = [
     ],
     icon: "fa-solid fa-store",
     badges: ["LARAVEL CORE", "E-COMMERCE", "GOOGLE CLOUD OAUTH", "ADMIN DASHBOARD"],
-    tech: ["Laravel", "Blade", "PHP", "MySQL", "Google Cloud Console", "TailwindCSS"],
+    tech: ["Laravel", "Blade", "PHP", "MySQL", "Google Cloud Console", "TailwindCSS", "Postman"],
     links: {
       github: "https://github.com/peterGwapo29/Sapatosan_shop",
       demo: null,
