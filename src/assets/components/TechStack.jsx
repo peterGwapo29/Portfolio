@@ -9,7 +9,9 @@ function TechStack() {
       { name: "JavaScript", iconClass: "devicon-javascript-plain colored" },
       { name: "TypeScript", iconClass: "devicon-typescript-plain colored" },
       { name: "React", iconClass: "devicon-react-original colored" },
-      { name: "Vite", iconClass: "devicon-vite-plain colored" }
+      { name: "Vite", iconClass: "devicon-vite-plain colored" },
+      { name: "Wordpress", iconClass: "devicon-wordpress-plain colored" },
+      { name: "Woocommerce", iconClass: "devicon-woocommerce-plain colored" }
     ],
     backend: [
       { name: "PHP", iconClass: "devicon-php-plain colored" },
