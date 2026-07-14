@@ -8,11 +8,18 @@ const projectVideoModules = import.meta.glob(
   { eager: true }
 );
 
-const THUMBNAIL_FILES = new Set(["01.png", "thumbnail.png", "cover.png"]);
+const THUMBNAIL_ORDER = ["00.png", "01.png", "0.png", "thumbnail.png", "cover.png"];
 const VIDEO_FILES = new Set(["01.mp4", "01.webm", "preview.mp4"]);
 
-const isThumbnailFile = (path) =>
-  THUMBNAIL_FILES.has((path.split("/").pop() || "").toLowerCase());
+const findThumbnailEntry = (entries) => {
+  for (const name of THUMBNAIL_ORDER) {
+    const entry = entries.find(
+      ([path]) => (path.split("/").pop() || "").toLowerCase() === name
+    );
+    if (entry) return entry;
+  }
+  return null;
+};
 
 const sortScreenshotPaths = (entries) => {
   const getOrderKey = (path) => {
@@ -43,8 +50,10 @@ export const buildProjectAssets = (modules) => {
   const screenshotSets = {};
 
   for (const [folder, entries] of Object.entries(grouped)) {
-    const thumbnailEntry = entries.find(([path]) => isThumbnailFile(path));
-    const carouselEntries = entries.filter(([path]) => !isThumbnailFile(path));
+    const thumbnailEntry = findThumbnailEntry(entries);
+    const carouselEntries = thumbnailEntry
+      ? entries.filter(([path]) => path !== thumbnailEntry[0])
+      : entries;
     const carouselImages = sortScreenshotPaths(carouselEntries);
 
     if (thumbnailEntry) {
@@ -84,6 +93,62 @@ export const projectAssets = {
 };
 
 export const featuredProjects = [
+  {
+    id: "sapatosan",
+    title: "Sapatosan Shop",
+    summary:
+      "A luxury e-commerce footwear platform featuring full-stack Laravel Blade design, secure role-based admin/user access, and Google Cloud OAuth registration.",
+    description:
+      "Sapatosan Shop is a premium full-stack e-commerce application developed using PHP, Laravel, Blade templates, and MySQL. Featuring a dark-themed glassmorphic user interface, the system manages role-based access for admins and users. It integrates Google Cloud Console for secure registration/login (Google Sign-In) and implements route middleware to protect shopping carts, wishlists, checkouts, and customer orders.",
+    features: [
+      "Secure user authentication (Login/Registration) with Google OAuth integration via Google Cloud Console",
+      "Interactive customer catalog, search, and dynamic category filters (Basketball, Running, Lifestyle)",
+      "Shopping cart, wishlist, checkout flow, and Cash On Delivery (COD) payment processing",
+      "Comprehensive Admin Dashboard with order summaries, total sales metrics, and interactive charts",
+      "Admin Category Management (CRUD) and Product Catalog controls with image uploading",
+      "Admin Order Management with status controls (Pending, Completed) and itemized line-item breakdowns",
+      "Protected user routes using Laravel middleware to prevent guest checkout errors",
+      "Modern dark-themed glassmorphic design and responsive layout with amber-colored styling accents",
+    ],
+    icon: "fa-solid fa-store",
+    badges: ["LARAVEL CORE", "E-COMMERCE", "GOOGLE CLOUD OAUTH", "ADMIN DASHBOARD"],
+    tech: ["Laravel", "Blade", "PHP", "MySQL", "Google Cloud Console", "TailwindCSS"],
+    links: {
+      github: "https://github.com/peterGwapo29/Sapatosan_shop",
+      demo: null,
+    },
+    screenshotsKey: "sapatosan",
+    carouselTitle: "Sapatosan E-commerce Screenshots",
+    featuredIn: "Laravel Fullstack Showcase / Production Version",
+  },
+  {
+    id: "javafx-pos-system",
+    title: "JavaFX POS Management System",
+    summary:
+      "A desktop Point of Sale (POS) application built with JavaFX and Scene Builder, featuring role-based access, inventory tracking, and CSV reports export.",
+    description:
+      "JavaFX POS Management System is a robust desktop point-of-sale and inventory control system developed using Java, JavaFX, FXML, Scene Builder, and MySQL. It features a modern dual-role (Admin and User) interface, active transaction processing with search and discounts, a rich administrator dashboard with real-time KPI metrics, detailed product/supplier management, and automated sales reporting with CSV data export.",
+    features: [
+      "Role-based authentication (Admin/User) to manage dashboard access and sales permissions",
+      "Dynamic POS Checkout screen with product catalog searching, cart calculations, discounts, and payment processing",
+      "Admin Dashboard with real-time sales stats, transaction logs, sold items tracking, and low-stock alerts",
+      "Keyboard shortcut integration (F1-F4) for rapid POS checkout, product entry, reports, and alerts",
+      "Comprehensive Product Management with add/import capabilities, supplier pricing, barcodes, SKU tracking, and category grouping",
+      "Detailed Sales Ledger and reporting history with start/end date filtering",
+      "Spreadsheet export utility enabling admins to export sales and inventory reports to CSV format",
+      "Clean modern JavaFX UI with custom FXML layouts, styled using custom CSS stylesheets",
+    ],
+    icon: "fa-solid fa-cash-register",
+    badges: ["JAVAFX DESKTOP", "POINT OF SALE", "INVENTORY SYSTEM", "CSV REPORTS"],
+    tech: ["Java", "JavaFX", "Scene Builder", "FXML", "MySQL", "JDBC", "CSS"],
+    links: {
+      github: "https://github.com/peterGwapo29/POS.git",
+      demo: null,
+    },
+    screenshotsKey: "POS",
+    carouselTitle: "POS Application Screenshots",
+    featuredIn: "Desktop Application Showcase / Desktop POS Release",
+  },
   {
     id: "club-event-management-system",
     title: "Club and Event Management System",
