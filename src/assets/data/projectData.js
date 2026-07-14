@@ -94,6 +94,36 @@ export const projectAssets = {
 
 export const featuredProjects = [
   {
+    id: "cashipay",
+    title: "CashiPay Management System",
+    summary:
+      "Offline-first JavaFX desktop app for treasury management — Top 1 mini capstone with ledger tracking, balance sheets, and dashboard analytics.",
+    description:
+      "CashiPay Management System is an offline-first desktop application developed using Java, JavaFX, Scene Builder, JDBC, and MySQL. Built as a mini capstone project, it streamlines treasury and financial record management through a secure authentication system, ledger tracking, interactive balance sheets, and responsive dashboard analytics. The application features smooth JavaFX animations, a modern user interface, and efficient CRUD operations to improve usability and simplify daily financial reconciliation.",
+    extraDescription:
+      "The system was developed following the complete software development lifecycle, from requirements gathering and system design to implementation, testing, and documentation. It includes comprehensive technical documentation covering system architecture, database design, UML diagrams, testing procedures, and user manuals. The project was successfully defended before a panel of evaluators and received Top 1 recognition among all competing capstone projects, demonstrating both its technical quality and practical value.",
+    features: [
+      "Secure administrator authentication and role-based access",
+      "Treasury ledger and financial record management",
+      "Interactive balance sheets and financial summaries",
+      "Dashboard with real-time statistics and analytics",
+      "Full CRUD functionality with MySQL integration",
+      "Responsive JavaFX UI with custom animations",
+      "Search, filtering, and reporting capabilities",
+      "Offline-first architecture for reliable desktop operation",
+    ],
+    icon: "fa-solid fa-wallet",
+    badges: ["TOP 1 CAPSTONE", "MINI CAPSTONE", "OFFLINE-FIRST"],
+    tech: ["Java", "JavaFX", "Scene Builder", "MySQL", "JDBC", "CSS", "FXML"],
+    links: {
+      github: null,
+      demo: null,
+    },
+    screenshotsKey: "cashipay",
+    carouselTitle: "CashiPay Application Screenshots",
+    featuredIn: "Top 1 Capstone Project / Mini Capstone Defense",
+  },
+  {
     id: "sapatosan",
     title: "Sapatosan Shop",
     summary:
@@ -166,36 +196,6 @@ export const featuredProjects = [
     screenshotsKey: "club-event-management-system",
     carouselTitle: "Club and Event Management System Screenshots",
     featuredIn: "University Campus Portal / Beta Testing v2.1",
-  },
-  {
-    id: "cashipay",
-    title: "CashiPay Management System",
-    summary:
-      "Offline-first JavaFX desktop app for treasury management — Top 1 mini capstone with ledger tracking, balance sheets, and dashboard analytics.",
-    description:
-      "CashiPay Management System is an offline-first desktop application developed using Java, JavaFX, Scene Builder, JDBC, and MySQL. Built as a mini capstone project, it streamlines treasury and financial record management through a secure authentication system, ledger tracking, interactive balance sheets, and responsive dashboard analytics. The application features smooth JavaFX animations, a modern user interface, and efficient CRUD operations to improve usability and simplify daily financial reconciliation.",
-    extraDescription:
-      "The system was developed following the complete software development lifecycle, from requirements gathering and system design to implementation, testing, and documentation. It includes comprehensive technical documentation covering system architecture, database design, UML diagrams, testing procedures, and user manuals. The project was successfully defended before a panel of evaluators and received Top 1 recognition among all competing capstone projects, demonstrating both its technical quality and practical value.",
-    features: [
-      "Secure administrator authentication and role-based access",
-      "Treasury ledger and financial record management",
-      "Interactive balance sheets and financial summaries",
-      "Dashboard with real-time statistics and analytics",
-      "Full CRUD functionality with MySQL integration",
-      "Responsive JavaFX UI with custom animations",
-      "Search, filtering, and reporting capabilities",
-      "Offline-first architecture for reliable desktop operation",
-    ],
-    icon: "fa-solid fa-wallet",
-    badges: ["TOP 1 CAPSTONE", "MINI CAPSTONE", "OFFLINE-FIRST"],
-    tech: ["Java", "JavaFX", "Scene Builder", "MySQL", "JDBC", "CSS", "FXML"],
-    links: {
-      github: null,
-      demo: null,
-    },
-    screenshotsKey: "cashipay",
-    carouselTitle: "CashiPay Application Screenshots",
-    featuredIn: "Top 1 Capstone Project / Mini Capstone Defense",
   },
   {
     id: "click-clutch",
