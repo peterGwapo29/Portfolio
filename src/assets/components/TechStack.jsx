@@ -3,24 +3,24 @@ import React from "react";
 function TechStack() {
   const stack = {
     frontend: [
+      { name: "HTML5", iconClass: "devicon-html5-plain colored" },
+      { name: "CSS3", iconClass: "devicon-css3-plain colored" },
+      { name: "Tailwind CSS", iconClass: "devicon-tailwindcss-original colored" },
       { name: "JavaScript", iconClass: "devicon-javascript-plain colored" },
       { name: "TypeScript", iconClass: "devicon-typescript-plain colored" },
       { name: "React", iconClass: "devicon-react-original colored" },
-      { name: "Tailwind CSS", iconClass: "devicon-tailwindcss-original colored" },
-      { name: "HTML5", iconClass: "devicon-html5-plain colored" },
-      { name: "CSS3", iconClass: "devicon-css3-plain colored" },
-      { name: "Sass/SCSS", iconClass: "devicon-sass-original colored" },
       { name: "Vite", iconClass: "devicon-vite-plain colored" }
     ],
     backend: [
       { name: "PHP", iconClass: "devicon-php-plain colored" },
       { name: "Laravel", iconClass: "devicon-laravel-original colored" },
+      { name: "NodeJS", iconClass: "devicon-nodejs-plain colored" },
+      { name: "Java", iconClass: "devicon-java-plain colored" },
       { name: "MySQL", iconClass: "devicon-mysql-plain colored" },
       { name: "MongoDB", iconClass: "devicon-mongodb-plain colored" },
       { name: "PostgreSQL", iconClass: "devicon-postgresql-plain colored" },
       { name: "SQLite", iconClass: "devicon-sqlite-plain colored" },
-      { name: "FireBase", iconClass: "devicon-firebase-plain colored" },
-      { name: "Java", iconClass: "devicon-java-plain colored" }
+      { name: "FireBase", iconClass: "devicon-firebase-plain colored" }
     ],
     tools: [
       { name: "Git", iconClass: "devicon-git-plain colored" },
@@ -29,7 +29,8 @@ function TechStack() {
       { name: "Figma", iconClass: "devicon-figma-plain colored" },
       { name: "Vercel", iconClass: "devicon-vercel-original text-white" },
       { name: "VS Code", iconClass: "devicon-vscode-plain colored" },
-      { name: "Composer", iconClass: "devicon-composer-line colored" }
+      { name: "Composer", iconClass: "devicon-composer-line colored" },
+      { name: "Scene Builder", iconClass: "devicon-scenebuilder-plain colored" }
     ]
   };
 
