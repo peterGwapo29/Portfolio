@@ -90,6 +90,14 @@ function Introduction({ setActiveTab }) {
             >
               email
             </a>
+            <span className="text-zinc-800">/</span>
+            <a
+              href="/src/assets/CV/Peter_OlanOlan_Resume.docx"
+              download
+              className="hover:text-[#e4e4e7] transition-colors"
+            >
+              cv
+            </a>
           </div>
 
         </div>
