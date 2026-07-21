@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { projectAssets } from "../data/projectData";
 import ScreenshotCarousel from "./ScreenshotCarousel";
 
-function ProjectDetail({ project, onBack }) {
+function ProjectDetail({ project, onBack, onNavigateToContact }) {
   const [carouselOpen, setCarouselOpen] = useState(false);
   const [carouselIndex, setCarouselIndex] = useState(0);
 
@@ -112,6 +112,20 @@ function ProjectDetail({ project, onBack }) {
             </p>
           )}
 
+          {project.requestNotice && (
+            <div className="bg-[#121214] border border-[#fca311]/30 rounded-xl p-4 my-1 flex items-start gap-3">
+              <i className="fa-solid fa-envelope text-[#fca311] mt-0.5 shrink-0 text-sm"></i>
+              <div className="flex flex-col gap-1 text-xs">
+                <span className="font-semibold text-white font-mono uppercase tracking-wider text-[11px]">
+                  Full Project Access
+                </span>
+                <p className="text-zinc-400 leading-relaxed">
+                  {project.requestNotice}
+                </p>
+              </div>
+            </div>
+          )}
+
           {project.features?.length > 0 && (
             <div>
               <h2 className="text-[11px] font-mono uppercase tracking-wider text-zinc-500 mb-3">
@@ -166,7 +180,25 @@ function ProjectDetail({ project, onBack }) {
               </a>
             )}
 
-            {!hasActions && (
+            {project.requestNotice && (
+              <button
+                type="button"
+                onClick={() => {
+                  if (onNavigateToContact) {
+                    onNavigateToContact();
+                  } else {
+                    const contactElem = document.getElementById("contact");
+                    if (contactElem) contactElem.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+                className="project-playstore-btn border border-[#fca311]/40 bg-[#fca311]/10 text-[#fca311] hover:bg-[#fca311]/20 transition-colors"
+              >
+                <i className="fa-solid fa-paper-plane text-[#fca311] text-xs"></i>
+                <span>Message Me For Full Project</span>
+              </button>
+            )}
+
+            {!hasActions && !project.requestNotice && (
               <button
                 onClick={() =>
                   alert("Live demo files not publicly hosted yet.")

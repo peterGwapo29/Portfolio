@@ -1,14 +1,14 @@
 const projectScreenshotModules = import.meta.glob(
-  "../images/project/{webdev,mobileapp,ui-ux}/**/*.{png,jpg,jpeg,webp,gif}",
+  "../images/project/**/*.{png,jpg,jpeg,webp,gif}",
   { eager: true }
 );
 
 const projectVideoModules = import.meta.glob(
-  "../images/project/{webdev,mobileapp,ui-ux}/**/*.{mp4,webm}",
+  "../images/project/**/*.{mp4,webm}",
   { eager: true }
 );
 
-const THUMBNAIL_ORDER = ["00.png", "01.png", "0.png", "thumbnail.png", "cover.png"];
+const THUMBNAIL_ORDER = ["00.png", "01.png", "0.png", "thumbnail.png", "cover.png", "p1.png"];
 const VIDEO_FILES = new Set(["01.mp4", "01.webm", "preview.mp4"]);
 
 const findThumbnailEntry = (entries) => {
@@ -21,14 +21,27 @@ const findThumbnailEntry = (entries) => {
   return null;
 };
 
-const sortScreenshotPaths = (entries) => {
-  const getOrderKey = (path) => {
-    const file = path.split("/").pop() || "";
-    const name = file.split(".")[0];
-    const num = parseInt(name, 10);
-    return Number.isNaN(num) ? 999999 : num;
-  };
+const getOrderKey = (path) => {
+  const file = path.split("/").pop() || "";
+  const name = file.split(".")[0].toLowerCase();
+  
+  const num = parseInt(name, 10);
+  if (!Number.isNaN(num) && (String(num) === name.replace(/^0+/, "") || name === "0" || name === "00")) {
+    return num;
+  }
 
+  const prefixMatch = name.match(/^([a-z]+)(\d+)$/);
+  if (prefixMatch) {
+    const prefix = prefixMatch[1];
+    const val = parseInt(prefixMatch[2], 10);
+    const prefixWeight = prefix === "p" ? 100 : prefix === "s" ? 200 : 300;
+    return prefixWeight + val;
+  }
+
+  return 999999;
+};
+
+const sortScreenshotPaths = (entries) => {
   return entries
     .sort(([a], [b]) => getOrderKey(a) - getOrderKey(b))
     .map(([, mod]) => mod.default);
@@ -38,10 +51,10 @@ export const buildProjectAssets = (modules) => {
   const grouped = {};
 
   for (const [path, mod] of Object.entries(modules)) {
-    const match = path.match(/\/(webdev|mobileapp|ui-ux)\/([^/]+)\//);
-    if (!match) continue;
+    const parts = path.split("/");
+    const folder = parts[parts.length - 2];
+    if (!folder || folder === "project") continue;
 
-    const folder = match[2];
     if (!grouped[folder]) grouped[folder] = [];
     grouped[folder].push([path, mod]);
   }
@@ -73,10 +86,8 @@ export const buildProjectVideos = (modules) => {
   const videos = {};
 
   for (const [path, mod] of Object.entries(modules)) {
-    const match = path.match(/\/(webdev|mobileapp|ui-ux)\/([^/]+)\//);
-    if (!match) continue;
-
-    const folder = match[2];
+    const parts = path.split("/");
+    const folder = parts[parts.length - 2];
     const file = (path.split("/").pop() || "").toLowerCase();
 
     if (VIDEO_FILES.has(file) || file.endsWith(".mp4") || file.endsWith(".webm")) {
@@ -93,6 +104,47 @@ export const projectAssets = {
 };
 
 export const featuredProjects = [
+  {
+    id: "wordpress-woocommerce",
+    title: "WordPress WooCommerce Store",
+    summary:
+      "Full-featured WooCommerce eCommerce website with complete store administration, custom AJAX side cart drawer, and customizable authentication forms.",
+    description:
+      "Developed a fully functional eCommerce website using WordPress and WooCommerce with complete admin management capabilities. The system enables administrators to manage products, categories, brands, inventory, discounts, pricing, customer accounts, and orders efficiently. Integrated Side Cart WooCommerce for a seamless AJAX shopping experience and Login & Register Customizer for modern customer authentication through popup, slider, and inline forms. The website is responsive, user-friendly, and designed to provide an efficient online shopping experience for both customers and administrators.",
+    requestNotice:
+      "If you would like to see the full project files, database schema, or a live demonstration of this WooCommerce store, please message me directly and I will gladly provide complete project access and proof.",
+    features: [
+      "Complete WooCommerce Store Management (products, categories, brands, inventory, simple/variable products, SKU)",
+      "Product & Discount Management (promotions, scheduling, sale pricing with discount comparison badges)",
+      "Custom User Authentication (popup, slider & inline login/register forms with customer profiles)",
+      "AJAX Side Cart Experience (slide-out drawer, instant add-to-cart, direct quantity updates & live subtotal)",
+      "Admin Order Management (order tracking & status workflow - pending, completed, cancelled, refunded)",
+      "Product Organization & Filtering (categorization, tag management, brand management, custom attributes)",
+      "WooCommerce Analytics Dashboard (sales overview, customer metrics, revenue reports & inventory monitoring)",
+      "Responsive & Secure Design (optimized mobile/tablet shopping interface with protected user data)",
+    ],
+    icon: "fa-brands fa-wordpress",
+    badges: ["WORDPRESS", "WOOCOMMERCE", "AJAX SIDE CART", "E-COMMERCE"],
+    tech: [
+      "WordPress",
+      "WooCommerce",
+      "PHP",
+      "MySQL",
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Side Cart WooCommerce Plugin",
+      "Login & Register Customizer",
+      "Responsive Web Design",
+    ],
+    links: {
+      github: null,
+      demo: null,
+    },
+    screenshotsKey: "wp",
+    carouselTitle: "WordPress WooCommerce Screenshots",
+    featuredIn: "WordPress eCommerce Showcase",
+  },
   {
     id: "cashipay",
     title: "CashiPay Management System",

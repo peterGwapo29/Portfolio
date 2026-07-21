@@ -7,7 +7,7 @@ import {
 } from "../data/projectData";
 import ProjectDetail from "./ProjectDetail";
 
-function Projects() {
+function Projects({ setActiveTab }) {
   const [selectedProjectId, setSelectedProjectId] = useState(null);
 
   const { thumbnails } = projectAssets;
@@ -28,6 +28,7 @@ function Projects() {
       <ProjectDetail
         project={selectedProject}
         onBack={() => setSelectedProjectId(null)}
+        onNavigateToContact={() => setActiveTab && setActiveTab("contact")}
       />
     );
   }

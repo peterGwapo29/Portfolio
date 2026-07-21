@@ -30,7 +30,7 @@ function App() {
       case "about":
         return <Introduction setActiveTab={setActiveTab} />;
       case "projects":
-        return <Projects />;
+        return <Projects setActiveTab={setActiveTab} />;
       case "stack":
         return <TechStack />;
       case "services":
