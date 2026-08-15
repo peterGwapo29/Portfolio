@@ -8,16 +8,45 @@ const projectVideoModules = import.meta.glob(
   { eager: true }
 );
 
-const THUMBNAIL_ORDER = ["00.png", "01.png", "0.png", "thumbnail.png", "cover.png", "p1.png"];
+const THUMBNAIL_ORDER = [
+  "00.png",
+  "01.png",
+  "0.png",
+  "thumbnail.png",
+  "thumb_nail.jpg",
+  "thumb_nail.png",
+  "thumbnail.jpg",
+  "cover.png",
+  "p1.png",
+];
 const VIDEO_FILES = new Set(["01.mp4", "01.webm", "preview.mp4"]);
+
+const getProjectFolderName = (path) => {
+  const parts = path.split("/");
+  const projectIdx = parts.indexOf("project");
+  if (projectIdx === -1 || projectIdx >= parts.length - 1) return null;
+  const rel = parts.slice(projectIdx + 1);
+  if (rel.length === 2) return rel[0];
+  if (rel.length >= 3) return rel[1];
+  return null;
+};
 
 const findThumbnailEntry = (entries) => {
   for (const name of THUMBNAIL_ORDER) {
     const entry = entries.find(
-      ([path]) => (path.split("/").pop() || "").toLowerCase() === name
+      ([path]) => (path.split("/").pop() || "").toLowerCase() === name.toLowerCase()
     );
     if (entry) return entry;
   }
+  const fallback = entries.find(([path]) => {
+    const fn = (path.split("/").pop() || "").toLowerCase();
+    return (
+      fn.includes("thumb") ||
+      fn.startsWith("cover") ||
+      fn.startsWith("00")
+    );
+  });
+  if (fallback) return fallback;
   return null;
 };
 
@@ -26,7 +55,12 @@ const getOrderKey = (path) => {
   const name = file.split(".")[0].toLowerCase();
   
   const num = parseInt(name, 10);
-  if (!Number.isNaN(num) && (String(num) === name.replace(/^0+/, "") || name === "0" || name === "00")) {
+  if (
+    !Number.isNaN(num) &&
+    (String(num) === name.replace(/^0+/, "") || name === "0" || name === "00")
+  ) {
+    if (path.includes("/user_f/")) return 100 + num;
+    if (path.includes("/admin_f/")) return 200 + num;
     return num;
   }
 
@@ -51,8 +85,7 @@ export const buildProjectAssets = (modules) => {
   const grouped = {};
 
   for (const [path, mod] of Object.entries(modules)) {
-    const parts = path.split("/");
-    const folder = parts[parts.length - 2];
+    const folder = getProjectFolderName(path);
     if (!folder || folder === "project") continue;
 
     if (!grouped[folder]) grouped[folder] = [];
@@ -86,8 +119,7 @@ export const buildProjectVideos = (modules) => {
   const videos = {};
 
   for (const [path, mod] of Object.entries(modules)) {
-    const parts = path.split("/");
-    const folder = parts[parts.length - 2];
+    const folder = getProjectFolderName(path) || (path.split("/").pop() || "").toLowerCase();
     const file = (path.split("/").pop() || "").toLowerCase();
 
     if (VIDEO_FILES.has(file) || file.endsWith(".mp4") || file.endsWith(".webm")) {
@@ -104,6 +136,50 @@ export const projectAssets = {
 };
 
 export const featuredProjects = [
+  {
+    id: "sumbong-app",
+    title: "Sumbong App — City Service Request System",
+    summary:
+      "Full-stack city service request platform empowering residents to submit community concerns with photo evidence, backed by Next.js, Laravel REST API, and a cloud MySQL database.",
+    description:
+      "Sumbong App is a full-stack city service request platform designed to help residents report community concerns and request available local services through a mobile-friendly web application. Users can select a service category, describe their concern, and attach photos as supporting evidence. Submitted requests are sent to the administrative system, where authorized administrators can review, monitor, and process citizen requests in real time.",
+    extraDescription:
+      "Demonstrating a complete full-stack architecture, Sumbong App connects a responsive Next.js frontend deployed on Vercel with a Laravel/PHP backend REST API deployed on Render, powered by a cloud-hosted MySQL database on Railway. It provides an end-to-end civic reporting solution from citizen submission to administrative workflow management.",
+    features: [
+      "Citizen Service Requests — Residents can submit reports and requests for available local community services",
+      "Service Categories — Users can select appropriate service categories (e.g. garbage collection, public works)",
+      "Request Submission & Photo Upload — Detailed issue reporting with supporting photo attachments as evidence",
+      "User Authentication — Secure citizen login and account access",
+      "Admin Dashboard — Dedicated administrative panel for reviewing, monitoring, and managing citizen requests",
+      "Request Management Workflow — Admins can review, process, and track incoming civic reports",
+      "Cloud Database — Real-time data storage powered by a cloud-hosted MySQL database on Railway",
+      "Full-Stack Architecture — Next.js frontend REST client communicating with Laravel/PHP backend",
+      "Live Cloud Deployment — Frontend deployed on Vercel and backend API hosted on Render",
+    ],
+    icon: "fa-solid fa-[#fca311] fa-building-shield",
+    badges: ["NEXT.JS", "LARAVEL REST API", "FULL-STACK", "MYSQL", "VERCEL & RENDER"],
+    tech: [
+      "Next.js",
+      "React",
+      "JavaScript",
+      "Laravel",
+      "PHP",
+      "REST API",
+      "MySQL",
+      "Railway",
+      "Vercel",
+      "Render",
+      "Responsive Web Design",
+    ],
+    links: {
+      github: "https://github.com/peterGwapo29/SumbongApp.git",
+      demo: "https://sumbong-sage.vercel.app/",
+      adminDemo: "https://sumbongapp.onrender.com/admin",
+    },
+    screenshotsKey: "sumbong-app",
+    carouselTitle: "Sumbong App Screenshots",
+    featuredIn: "Full-Stack City Service Request Platform / Vercel & Render Release",
+  },
   {
     id: "wordpress-woocommerce",
     title: "WordPress WooCommerce Store",

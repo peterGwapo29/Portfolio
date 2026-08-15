@@ -160,10 +160,10 @@ function Introduction({ setActiveTab }) {
         <div className="mt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 border border-zinc-900 bg-[#0c0c0d]/50 hover:bg-[#0c0c0d] rounded-xl hover:border-zinc-800/50 transition-all duration-200">
           <div className="flex flex-col">
             <span className="text-[#e4e4e7] font-medium text-sm sm:text-base">
-              CashiPay Management System
+              Sumbong App — City Service Request System
             </span>
             <span className="text-zinc-500 text-xs mt-1 leading-normal">
-              Finalized UI dashboard elements, local caching, and custom screen transitions.
+              Full-stack city service request platform connecting Next.js frontend with Laravel API and cloud MySQL database.
             </span>
           </div>
           <span className="text-[#fca311] text-[10px] font-bold shrink-0 tracking-wider bg-[#fca311]/5 px-2 py-1 rounded border border-[#fca311]/15 align-self-start sm:align-self-auto">

@@ -26,6 +26,7 @@ function ProjectDetail({ project, onBack, onNavigateToContact }) {
   const hasActions =
     project.links?.github ||
     project.links?.demo ||
+    project.links?.adminDemo ||
     screenshots.length > 0 ||
     video;
 
@@ -177,6 +178,18 @@ function ProjectDetail({ project, onBack, onNavigateToContact }) {
               >
                 <i className="fa-solid fa-play text-white text-xs"></i>
                 <span>Get Live Demo</span>
+              </a>
+            )}
+
+            {project.links?.adminDemo && (
+              <a
+                href={project.links.adminDemo}
+                target="_blank"
+                rel="noreferrer"
+                className="project-playstore-btn border border-amber-500/40 bg-amber-500/10 text-amber-400 hover:bg-amber-500/20 transition-colors"
+              >
+                <i className="fa-solid fa-user-shield text-amber-400 text-xs"></i>
+                <span>Admin Dashboard</span>
               </a>
             )}
 
