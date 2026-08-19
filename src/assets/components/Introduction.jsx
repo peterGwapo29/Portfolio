@@ -92,8 +92,8 @@ function Introduction({ setActiveTab }) {
             </a>
             <span className="text-zinc-800">/</span>
             <a
-              href="/src/assets/CV/Peter_OlanOlan_Resume.pdf"
-              download
+              href="/CV/Peter_OlanOlan_Resume.pdf"
+              download="Peter_OlanOlan_Resume.pdf"
               className="hover:text-[#e4e4e7] transition-colors"
             >
               cv
