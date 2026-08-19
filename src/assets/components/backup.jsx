@@ -10,7 +10,6 @@ import UI3 from "./assets/images/project/ui-ux/business-card-concept/1.png";
 import UI4 from "./assets/images/project/ui-ux/footprint-travel/1.png";
 import UI5 from "./assets/images/project/ui-ux/payment-transfer-system/1.png";
 import inprogressGif from "./assets/images/inprogress.gif";
-import CV from "/src/CV/Peter_OlanOlan_Resume.pdf";
 
 function App() {
   const [typedName, setTypedName] = useState("");
@@ -156,7 +155,12 @@ function App() {
               </p>
 
               <button>
-                <a href={CV}>Download CV</a>
+                  <a
+                    href="/CV/Peter_OlanOlan_Resume.pdf"
+                    download="Peter_OlanOlan_Resume.pdf"
+                  >
+                    Download CV
+                  </a>
               </button>
             </div>
           </div>
