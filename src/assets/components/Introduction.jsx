@@ -64,41 +64,38 @@ function Introduction({ setActiveTab }) {
             I'm currently expanding my knowledge in backend development (Laravel & MySQL) to build powerful full-stack applications. I love crafting clean, responsive user interfaces that perfectly blend form and function.
           </p>
 
-          {/* Social Links formatted inline with slashes */}
-          <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-2 text-zinc-500 font-mono text-xs mt-6">
-            <a 
-              href="https://github.com/peterGwapo29" 
-              target="_blank" 
-              rel="noreferrer" 
-              className="hover:text-[#e4e4e7] transition-colors"
-            >
-              github
-            </a>
-            <span className="text-zinc-800">/</span>
-            <a 
-              href="https://www.facebook.com/petergwapo.292004" 
-              target="_blank" 
-              rel="noreferrer" 
-              className="hover:text-[#e4e4e7] transition-colors"
-            >
-              facebook
-            </a>
-            <span className="text-zinc-800">/</span>
-            <a 
-              href="mailto:peterolanolan@gmail.com" 
-              className="hover:text-[#e4e4e7] transition-colors"
-            >
-              email
-            </a>
-            <span className="text-zinc-800">/</span>
-            <a
-              href="/CV/Peter_OlanOlan_Resume.pdf"
-              download="Peter_OlanOlan_Resume.pdf"
-              className="hover:text-[#e4e4e7] transition-colors"
-            >
-              cv
-            </a>
-          </div>
+          {/* Social Links formatted as Pills */}
+<div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 font-mono text-xs mt-6">
+  <a 
+    href="https://github.com/peterGwapo29" 
+    target="_blank" 
+    rel="noreferrer" 
+    className="px-3 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800/80 text-zinc-300 hover:text-[#fca311] hover:border-[#fca311]/50 hover:bg-[#fca311]/5 transition-all duration-200"
+  >
+    github ↗
+  </a>
+  <a 
+    href="https://www.facebook.com/petergwapo.292004" 
+    target="_blank" 
+    rel="noreferrer" 
+    className="px-3 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800/80 text-zinc-300 hover:text-[#fca311] hover:border-[#fca311]/50 hover:bg-[#fca311]/5 transition-all duration-200"
+  >
+    facebook ↗
+  </a>
+  <a 
+    href="mailto:peterolanolan@gmail.com" 
+    className="px-3 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800/80 text-zinc-300 hover:text-[#fca311] hover:border-[#fca311]/50 hover:bg-[#fca311]/5 transition-all duration-200"
+  >
+    email ↗
+  </a>
+  <a
+    href="/CV/Peter_OlanOlan_Resume Wordpress.pdf"
+    download="Peter_OlanOlan_Resume Wordpress.pdf"
+    className="px-3 py-1.5 rounded-lg bg-[#fca311] text-black font-semibold hover:bg-[#e08e00] transition-colors duration-200 shadow-sm"
+  >
+    cv ↓
+  </a>
+</div>
 
         </div>
 
