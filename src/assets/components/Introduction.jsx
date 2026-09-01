@@ -3,7 +3,7 @@ import profileImg from "../images/profile.png";
 
 function Introduction({ setActiveTab }) {
   const [typedTitle, setTypedTitle] = useState("");
-  const subtitleText = "Web & Mobile Developer";
+  const subtitleText = "Full-Stack Developer";
   const [isDeleting, setIsDeleting] = useState(false);
   const [index, setIndex] = useState(0);
 
