@@ -33,7 +33,7 @@ function Introduction({ setActiveTab }) {
     <section className="page-section">
       
       {/* Hero Layout */}
-      <div className="flex flex-col md:flex-row gap-6 lg:gap-8 items-start">
+      <div className="flex flex-col md:flex-row gap-6 lg:gap-8 items-center md:items-start">
         
         {/* Grayscale Halftone Image Container */}
         <div className="halftone-wrapper shadow-lg">
@@ -45,7 +45,7 @@ function Introduction({ setActiveTab }) {
         </div>
 
         {/* Text Bio */}
-        <div className="flex flex-col justify-center text-center md:text-left items-center md:items-start">
+        <div className="flex flex-col justify-center text-center md:text-left items-center md:items-start w-full">
           
           <span className="text-xs text-[#fca311] font-mono tracking-widest uppercase mb-1.5 block">
             {typedTitle}
@@ -65,37 +65,37 @@ function Introduction({ setActiveTab }) {
           </p>
 
           {/* Social Links formatted as Pills */}
-<div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 font-mono text-xs mt-6">
-  <a 
-    href="https://github.com/peterGwapo29" 
-    target="_blank" 
-    rel="noreferrer" 
-    className="px-3 py-1.5 rounded-lg bg-zinc-200 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800/80 text-zinc-700 dark:text-zinc-300 hover:text-[#fca311] hover:border-[#fca311]/50 hover:bg-[#fca311]/5 transition-all duration-200"
-  >
-    github ↗
-  </a>
-  <a 
-    href="https://www.facebook.com/petergwapo.292004" 
-    target="_blank" 
-    rel="noreferrer" 
-    className="px-3 py-1.5 rounded-lg bg-zinc-200 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800/80 text-zinc-700 dark:text-zinc-300 hover:text-[#fca311] hover:border-[#fca311]/50 hover:bg-[#fca311]/5 transition-all duration-200"
-  >
-    facebook ↗
-  </a>
-  <a 
-    href="mailto:peterolanolan@gmail.com" 
-    className="px-3 py-1.5 rounded-lg bg-zinc-200 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800/80 text-zinc-700 dark:text-zinc-300 hover:text-[#fca311] hover:border-[#fca311]/50 hover:bg-[#fca311]/5 transition-all duration-200"
-  >
-    email ↗
-  </a>
-  <a
-    href="/CV/Peter_OlanOlan_Resume Wordpress.pdf"
-    download="Peter_OlanOlan_Resume Wordpress.pdf"
-    className="px-3 py-1.5 rounded-lg bg-[#fca311] text-black font-semibold hover:bg-[#e08e00] transition-colors duration-200 shadow-sm"
-  >
-    cv ↓
-  </a>
-</div>
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 font-mono text-xs mt-6">
+            <a 
+              href="https://github.com/peterGwapo29" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="px-3 py-1.5 rounded-lg bg-zinc-200 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800/80 text-zinc-700 dark:text-zinc-300 hover:text-[#fca311] hover:border-[#fca311]/50 hover:bg-[#fca311]/5 transition-all duration-200"
+            >
+              github ↗
+            </a>
+            <a 
+              href="https://www.facebook.com/petergwapo.292004" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="px-3 py-1.5 rounded-lg bg-zinc-200 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800/80 text-zinc-700 dark:text-zinc-300 hover:text-[#fca311] hover:border-[#fca311]/50 hover:bg-[#fca311]/5 transition-all duration-200"
+            >
+              facebook ↗
+            </a>
+            <a 
+              href="mailto:peterolanolan@gmail.com" 
+              className="px-3 py-1.5 rounded-lg bg-zinc-200 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800/80 text-zinc-700 dark:text-zinc-300 hover:text-[#fca311] hover:border-[#fca311]/50 hover:bg-[#fca311]/5 transition-all duration-200"
+            >
+              email ↗
+            </a>
+            <a
+              href="/CV/Peter_OlanOlan_Resume Wordpress.pdf"
+              download="Peter_OlanOlan_Resume Wordpress.pdf"
+              className="px-3 py-1.5 rounded-lg bg-[#fca311] text-black font-semibold hover:bg-[#e08e00] transition-colors duration-200 shadow-sm"
+            >
+              cv ↓
+            </a>
+          </div>
 
         </div>
 
