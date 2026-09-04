@@ -2,31 +2,44 @@ import React from "react";
 
 function Services() {
   const services = [
-    { 
-      title: "Web Development", 
-      desc: "Creating responsive, secure, and modern web applications utilizing HTML, CSS, JavaScript, Tailwind, and React.", 
-      icon: "fa-solid fa-code", 
-      color: "text-blue-400" 
+    {
+      title: "Full-Stack Web Development",
+      desc: "Building responsive, modern, and scalable web applications using HTML, CSS, JavaScript, Tailwind CSS, React, PHP, and Laravel.",
+      icon: "fa-solid fa-code",
+      color: "text-blue-400",
     },
-    { 
-      title: "UI/UX & Mobile Prototypes", 
-      desc: "Structuring clean, intuitive user wireframes and high-fidelity clickable mockups using modern design systems in Figma.", 
-      icon: "fa-solid fa-pencil-ruler", 
-      color: "text-pink-400" 
+    {
+      title: "UI/UX & Web/Mobile Prototyping",
+      desc: "Designing clean, intuitive user interfaces, wireframes, and high-fidelity interactive prototypes using Figma and modern design systems.",
+      icon: "fa-solid fa-pencil-ruler",
+      color: "text-pink-400",
     },
-    { 
-      title: "Backend Engineering", 
-      desc: "Building relational databases (MySQL) and RESTful API backends with robust logic structures in PHP and Laravel.", 
-      icon: "fa-solid fa-server", 
-      color: "text-red-400" 
+    {
+      title: "Backend & API Development",
+      desc: "Developing secure backend systems, RESTful APIs, database structures, and application logic using PHP, Laravel, MySQL, MongoDB, and Firebase.",
+      icon: "fa-solid fa-server",
+      color: "text-red-400",
     },
-    { 
-      title: "Version Control & Hosting", 
-      desc: "Setting up collaborative workflows with Git & GitHub, and managing live deployments on Vercel or cloud web hosting.", 
-      icon: "fa-brands fa-git-alt", 
-      color: "text-green-400" 
+    { title: "Web System Maintenance & Debugging", 
+      desc: "Maintaining, troubleshooting, and improving existing web systems by identifying bugs, resolving technical issues, optimizing performance, and ensuring system stability and reliability.", 
+      icon: "fa-solid fa-screwdriver-wrench", 
+      color: "text-yellow-400", 
+    },
+    {
+      title: "Version Control & Deployment",
+      desc: "Managing development workflows with Git and GitHub, configuring environments, and deploying web applications to platforms such as Vercel and cloud hosting services.",
+      icon: "fa-brands fa-git-alt",
+      color: "text-green-400",
+    },
+    {
+      title: "AI-Assisted Development",
+      desc: "Using modern AI development tools such as Cursor, Claude Code, ChatGPT, Antigravity, OpenCodeX, and Devin AI to accelerate development, debugging, code generation, and problem solving.",
+      icon: "fa-solid fa-wand-magic-sparkles",
+      color: "text-purple-400",
     },
   ];
+
+
 
   return (
     <section className="page-section">
