@@ -70,7 +70,7 @@ function Introduction({ setActiveTab }) {
     href="https://github.com/peterGwapo29" 
     target="_blank" 
     rel="noreferrer" 
-    className="px-3 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800/80 text-zinc-300 hover:text-[#fca311] hover:border-[#fca311]/50 hover:bg-[#fca311]/5 transition-all duration-200"
+    className="px-3 py-1.5 rounded-lg bg-zinc-200 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800/80 text-zinc-700 dark:text-zinc-300 hover:text-[#fca311] hover:border-[#fca311]/50 hover:bg-[#fca311]/5 transition-all duration-200"
   >
     github ↗
   </a>
@@ -78,13 +78,13 @@ function Introduction({ setActiveTab }) {
     href="https://www.facebook.com/petergwapo.292004" 
     target="_blank" 
     rel="noreferrer" 
-    className="px-3 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800/80 text-zinc-300 hover:text-[#fca311] hover:border-[#fca311]/50 hover:bg-[#fca311]/5 transition-all duration-200"
+    className="px-3 py-1.5 rounded-lg bg-zinc-200 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800/80 text-zinc-700 dark:text-zinc-300 hover:text-[#fca311] hover:border-[#fca311]/50 hover:bg-[#fca311]/5 transition-all duration-200"
   >
     facebook ↗
   </a>
   <a 
     href="mailto:peterolanolan@gmail.com" 
-    className="px-3 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800/80 text-zinc-300 hover:text-[#fca311] hover:border-[#fca311]/50 hover:bg-[#fca311]/5 transition-all duration-200"
+    className="px-3 py-1.5 rounded-lg bg-zinc-200 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800/80 text-zinc-700 dark:text-zinc-300 hover:text-[#fca311] hover:border-[#fca311]/50 hover:bg-[#fca311]/5 transition-all duration-200"
   >
     email ↗
   </a>
@@ -116,10 +116,10 @@ function Introduction({ setActiveTab }) {
         <div className="border-b md:border-b-0 md:border-r border-zinc-800/80 p-5 flex flex-col justify-between hover:bg-zinc-900/30 transition-colors">
           <span className="text-zinc-500 text-[10px] uppercase tracking-wider">Experience</span>
           <div className="flex items-center justify-between mt-3.5">
-            <span className="text-[#e4e4e7] font-bold text-base sm:text-lg">3+ Yrs</span>
+            <span className="text-[#e4e4e7] font-bold text-base sm:text-lg">&lt; 1 Yr</span>
             <span className="text-zinc-600 text-xs">↗</span>
           </div>
-          <span className="text-zinc-600 text-[9px] uppercase mt-1">Coding Exp School based</span>
+          <span className="text-zinc-600 text-[9px] uppercase mt-1">International Experience</span>
         </div>
 
         <div className="border-r border-zinc-800/80 p-5 flex flex-col justify-between hover:bg-zinc-900/30 transition-colors">
@@ -134,7 +134,7 @@ function Introduction({ setActiveTab }) {
         <div className="p-5 flex flex-col justify-between hover:bg-zinc-900/30 transition-colors">
           <span className="text-zinc-500 text-[10px] uppercase tracking-wider">Preferences</span>
           <div className="flex items-center justify-between mt-3.5">
-            <span className="text-[#e4e4e7] font-bold text-base sm:text-lg font-sans">React/PHP</span>
+            <span className="text-[#e4e4e7] font-bold text-base sm:text-lg font-sans">React/PHP/laravel</span>
             <span className="text-zinc-600 text-xs">↗</span>
           </div>
           <span className="text-zinc-600 text-[9px] uppercase mt-1">Core Tech Stack</span>
