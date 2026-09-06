@@ -89,8 +89,8 @@ function Introduction({ setActiveTab }) {
               email ↗
             </a>
             <a
-              href="/CV/Peter_OlanOlan_Resume Wordpress.pdf"
-              download="Peter_OlanOlan_Resume Wordpress.pdf"
+              href="/CV/Peter_OlanOlan_Resume.pdf"
+              download="Peter_OlanOlan_Resume.pdf"
               className="px-3 py-1.5 rounded-lg bg-[#fca311] text-black font-semibold hover:bg-[#e08e00] transition-colors duration-200 shadow-sm"
             >
               cv ↓
