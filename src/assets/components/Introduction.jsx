@@ -57,11 +57,11 @@ function Introduction({ setActiveTab }) {
           </h1>
 
           <p className="text-zinc-400 text-sm sm:text-base max-w-xl leading-relaxed mb-4">
-            Hi, I'm Peter, currently pursuing a Bachelor of Science in Information Technology as a 4th year student. I'm a passionate, detail-driven web developer with a strong foundation in frontend technologies like HTML, CSS, JavaScript, and React.
+            Hi, I'm Peter, a Web Developer and a 4th-year Bachelor of Science in Information Technology student. I’m a passionate, detail-driven developer with experience in frontend technologies like HTML, CSS, JavaScript, and React, as well as professional experience in web development and system maintenance.
           </p>
 
           <p className="text-zinc-500 text-sm max-w-xl leading-relaxed font-mono">
-            I'm currently expanding my knowledge in backend development (Laravel & MySQL) to build powerful full-stack applications. I love crafting clean, responsive user interfaces that perfectly blend form and function.
+            I specialize in debugging and maintaining web systems, identifying and resolving technical issues, improving system performance, and implementing updates and enhancements. I’m also expanding my backend expertise with Laravel and MySQL to build reliable, scalable full-stack applications.
           </p>
 
           {/* Social Links formatted as Pills */}
