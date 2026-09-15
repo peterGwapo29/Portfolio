@@ -138,7 +138,7 @@ function Introduction({ setActiveTab }) {
         <div className="p-5 flex flex-col justify-between hover:bg-zinc-900/30 transition-colors">
           <span className="text-zinc-500 text-[10px] uppercase tracking-wider">Preferences</span>
           <div className="flex items-center justify-between mt-3.5">
-            <span className="text-[#e4e4e7] font-bold text-base sm:text-lg font-sans">React/PHP/laravel</span>
+            <span className="text-[#e4e4e7] font-bold text-base sm:text-lg font-sans">MERN|PHP|Laravel</span>
             <span className="text-zinc-600 text-xs">↗</span>
           </div>
           <span className="text-zinc-600 text-[9px] uppercase mt-1">Core Tech Stack</span>
