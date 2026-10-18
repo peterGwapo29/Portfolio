@@ -137,6 +137,53 @@ export const projectAssets = {
 
 export const featuredProjects = [
   {
+    id: "golden-booking-system",
+    title: "Golden Resort Booking System",
+    summary:
+      "Full-stack resort booking and management system with accommodation availability, reservation management, check-in/check-out, and housekeeping workflows.",
+    description:
+      "Golden Resort Booking System is a full-stack web application designed to streamline resort reservations and daily operations. It provides a guest-facing accommodation browsing and booking experience alongside administrative and staff portals for managing reservations, rooms, guest information, and housekeeping activities.",
+    extraDescription:
+      "Built with Next.js, TypeScript, Tailwind CSS, Laravel, PHP, and MySQL, the system integrates a modern frontend with a REST API backend. It demonstrates full-stack development, role-based access control, reservation workflows, and operational management. Payment functionality should be described as simulated if it is demonstration-only.",
+    features: [
+      "Guest-Facing Frontend — Browse accommodations and search room availability",
+      "Reservation Management — Manage booking records and reservation workflows",
+      "Admin Portal — Centralized management of resort operations",
+      "Staff Portal — Dedicated interfaces for authorized staff workflows",
+      "Room Management — Track accommodation details and operational status",
+      "Check-in and Check-out — Manage guest arrival and departure workflows",
+      "Housekeeping Management — Generate and manage room turnover cleaning tasks",
+      "Guest Management — Access guest profiles and reservation history",
+      "REST API Integration — Next.js frontend connected to a Laravel backend",
+      "Role-Based Access Control — Restrict features according to user permissions",
+    ],
+    icon: "fa-solid fa-hotel",
+    badges: [
+      "FULL-STACK",
+      "NEXT.JS",
+      "LARAVEL",
+      "RESERVATION SYSTEM",
+      "MYSQL",
+    ],
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Laravel",
+      "PHP",
+      "REST API",
+      "MySQL",
+    ],
+    links: {
+      github: null,
+      demo: null,
+    },
+    screenshotsKey: "golden-booking-system",
+    carouselTitle: "Golden Resort Booking System Screenshots",
+    featuredIn: "Full-Stack Resort Booking & Management System",
+  },
+  {
     id: "sumbong-app",
     title: "Sumbong App — City Service Request System",
     summary:
