@@ -176,7 +176,7 @@ export const featuredProjects = [
       "MySQL",
     ],
     links: {
-      github: null,
+      github: "https://github.com/peterGwapo29/Golden-Resort-Booking-System.git",
       demo: null,
     },
     screenshotsKey: "golden-booking-system",
