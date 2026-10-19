@@ -1,81 +1,129 @@
+
 import React from "react";
 
+const services = [
+  {
+    title: "Full-Stack Web Development",
+    desc: "Building responsive, scalable web applications from frontend interfaces to backend functionality.",
+    icon: "fa-solid fa-code",
+    color: "text-blue-400",
+    number: "01",
+    tags: ["React", "Next.js", "Node.js", "Laravel"],
+  },
+  {
+    title: "UI/UX Design & Prototyping",
+    desc: "Creating clean, intuitive user experiences through wireframes, interactive prototypes, and responsive interface designs that prioritize usability.",
+    icon: "fa-solid fa-pen-ruler",
+    color: "text-pink-400",
+    number: "02",
+    tags: ["Figma", "Wireframes", "Prototypes"],
+  },
+  {
+    title: "Backend & API Development",
+    desc: "Developing reliable backend services, REST APIs, database structures, authentication, and business logic to power modern applications.",
+    icon: "fa-solid fa-server",
+    color: "text-red-400",
+    number: "03",
+    tags: ["PHP", "Laravel", "Node.js", "Express.js", "MySQL"],
+  },
+  {
+    title: "System Maintenance & Debugging",
+    desc: "Troubleshooting existing applications, fixing bugs, improving performance, and maintaining system stability, security, and reliability.",
+    icon: "fa-solid fa-screwdriver-wrench",
+    color: "text-yellow-400",
+    number: "04",
+    tags: ["Bug Fixes", "Optimization", "Support"],
+  },
+  {
+    title: "Deployment & Version Control",
+    desc: "Managing source code, configuring environments, maintaining Git workflows, and deploying applications to reliable hosting platforms.",
+    icon: "fa-brands fa-git-alt",
+    color: "text-green-400",
+    number: "05",
+    tags: ["Git", "GitHub", "Vercel", "Netlify", "Hostinger"],
+  },
+  {
+    title: "AI-Assisted Development",
+    desc: "Leveraging AI coding assistants to accelerate implementation, investigate bugs, explore solutions, and improve development workflows with careful code review.",
+    icon: "fa-solid fa-wand-magic-sparkles",
+    color: "text-purple-400",
+    number: "06",
+    tags: ["Antigravity", "Claude Code", "Cursor", "AI Tools"],
+  },
+];
+
 function Services() {
-  const services = [
-    {
-      title: "Full-Stack Web Development",
-      desc: "Building responsive, modern, and scalable web applications using HTML, CSS, JavaScript, Tailwind CSS, React, PHP, and Laravel.",
-      icon: "fa-solid fa-code",
-      color: "text-blue-400",
-    },
-    {
-      title: "UI/UX & Web/Mobile Prototyping",
-      desc: "Designing clean, intuitive user interfaces, wireframes, and high-fidelity interactive prototypes using Figma and modern design systems.",
-      icon: "fa-solid fa-pencil-ruler",
-      color: "text-pink-400",
-    },
-    {
-      title: "Backend & API Development",
-      desc: "Developing secure backend systems, RESTful APIs, database structures, and application logic using PHP, Laravel, MySQL, MongoDB, and Firebase.",
-      icon: "fa-solid fa-server",
-      color: "text-red-400",
-    },
-    { title: "Web System Maintenance & Debugging", 
-      desc: "Maintaining, troubleshooting, and improving existing web systems by identifying bugs, resolving technical issues, optimizing performance, and ensuring system stability and reliability.", 
-      icon: "fa-solid fa-screwdriver-wrench", 
-      color: "text-yellow-400", 
-    },
-    {
-      title: "Version Control & Deployment",
-      desc: "Managing development workflows with Git and GitHub, configuring environments, and deploying web applications to platforms such as Vercel and cloud hosting services.",
-      icon: "fa-brands fa-git-alt",
-      color: "text-green-400",
-    },
-    {
-      title: "AI-Assisted Development",
-      desc: "Using modern AI development tools such as Cursor, Claude Code, ChatGPT, Antigravity, OpenCodeX, and Devin AI to accelerate development, debugging, code generation, and problem solving.",
-      icon: "fa-solid fa-wand-magic-sparkles",
-      color: "text-purple-400",
-    },
-  ];
-
-
-
   return (
     <section className="page-section">
-      
-      {/* Header */}
-      <div className="flex flex-col gap-2 mb-12">
+      {/* Section Header */}
+      <div className="mb-12 flex flex-col gap-4">
         <h1 className="font-mono text-3xl font-bold tracking-tight text-white">
           services
         </h1>
         <p className="text-zinc-500 text-sm max-w-xl leading-relaxed">
-          The technical capabilities and software solutions I offer to clients, teammates, and academic partners.
+          I build and maintain digital solutions that help turn ideas into
+          reliable, functional, and user-friendly applications.
         </p>
       </div>
 
-      {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {services.map((service, i) => (
-          <div 
-            key={i} 
-            className="bg-[#121214] border border-zinc-900 rounded-2xl p-6 hover-scale hover:border-zinc-800 transition-all duration-200 flex flex-col gap-4"
+      {/* Services Grid */}
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
+        {services.map((service) => (
+          <article
+            key={service.number}
+            className="group relative flex flex-col overflow-hidden rounded-2xl border border-zinc-800/80 bg-[#121214] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#fca311]/40 hover:bg-[#171719]"
           >
-            <div className={`text-3xl ${service.color}`}>
-              <i className={service.icon}></i>
+            {/* Top Row */}
+            <div className="mb-7 flex items-start justify-between">
+              <div
+                className={`flex h-12 w-12 items-center justify-center rounded-xl border border-white/5 bg-white/[0.04] ${service.color}`}
+              >
+                <i
+                  className={`${service.icon} text-xl`}
+                  aria-hidden="true"
+                />
+              </div>
             </div>
-            
-            <h2 className="text-lg font-bold text-white font-mono mt-1">
+
+            {/* Content */}
+            <h2 className="mb-3 text-lg font-semibold leading-snug text-white">
               {service.title}
             </h2>
-            
-            <p className="text-zinc-400 text-sm leading-relaxed">
+
+            <p className="mb-6 flex-1 text-sm leading-7 text-zinc-400">
               {service.desc}
             </p>
-          </div>
+
+            {/* Technology / Service Tags */}
+            <div className="flex flex-wrap gap-2 border-t border-zinc-800/80 pt-5">
+              {service.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-md border border-zinc-800 bg-black/20 px-2.5 py-1 font-mono text-[11px] text-zinc-400 transition-colors group-hover:border-zinc-700"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            {/* Decorative Accent */}
+            <div className="absolute bottom-0 left-6 right-6 h-px origin-left scale-x-0 bg-[#fca311]/70 transition-transform duration-300 group-hover:scale-x-100" />
+          </article>
         ))}
       </div>
 
+      {/* Call to Action */}
+      <div className="mt-10 flex flex-col justify-between gap-5 rounded-2xl border border-zinc-800 bg-[#121214] p-6 sm:flex-row sm:items-center sm:p-8">
+        <div>
+          <h2 className="mb-2 text-lg font-semibold text-white">
+            Have a project in mind?
+          </h2>
+          <p className="max-w-xl text-sm leading-6 text-zinc-400">
+            Let&apos;s discuss your idea and explore how I can help bring it
+            to life.
+          </p>
+        </div>
+      </div>
     </section>
   );
 }
