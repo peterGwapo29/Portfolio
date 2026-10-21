@@ -402,7 +402,7 @@ export const featuredProjects = [
     badges: ["MOBILE APP", "FLUTTER", "OFFLINE/ONLINE SYNC"],
     tech: ["Flutter", "Dart", "SQLite", "Firebase"],
     links: {
-      github: null,
+      github: "https://github.com/peterGwapo29/GradePad-Student-Portal",
       demo: null,
     },
     screenshotsKey: "gradepad",
