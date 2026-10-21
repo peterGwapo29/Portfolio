@@ -291,7 +291,7 @@ export const featuredProjects = [
     badges: ["TOP 1 CAPSTONE", "MINI CAPSTONE", "OFFLINE-FIRST"],
     tech: ["Java", "JavaFX", "Scene Builder", "MySQL", "JDBC", "CSS", "FXML"],
     links: {
-      github: null,
+      github: "https://github.com/peterGwapo29/CashiePay.git",
       demo: null,
     },
     screenshotsKey: "cashipay",

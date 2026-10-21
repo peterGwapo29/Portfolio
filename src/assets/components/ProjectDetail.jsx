@@ -155,7 +155,7 @@ function ProjectDetail({ project, onBack, onNavigateToContact }) {
                 className="project-appstore-btn"
               >
                 <i className="devicon-github-original text-base"></i>
-                <span>Download on GitHub</span>
+                <span>GitHub Repository</span>
               </a>
             )}
 
